@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FotosColetor", "FotosColetor\FotosColetor.vbproj", "{379FE180-FDCF-4E58-B389-34734B21B208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsFotosColetor", "WsFotosColetor\WsFotosColetor.csproj", "{7819E8C7-05FF-4AB2-BA5B-D6E81D86D220}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{379FE180-FDCF-4E58-B389-34734B21B208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379FE180-FDCF-4E58-B389-34734B21B208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379FE180-FDCF-4E58-B389-34734B21B208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379FE180-FDCF-4E58-B389-34734B21B208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7819E8C7-05FF-4AB2-BA5B-D6E81D86D220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7819E8C7-05FF-4AB2-BA5B-D6E81D86D220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7819E8C7-05FF-4AB2-BA5B-D6E81D86D220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7819E8C7-05FF-4AB2-BA5B-D6E81D86D220}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9011B178-4965-4635-A681-7368B605A345}
+	EndGlobalSection
+EndGlobal

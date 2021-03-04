@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{379FE180-FDCF-4E58-B389-34734B21B208}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Coletor</RootNamespace>
+    <AssemblyName>Coletor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Coletor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Coletor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\adodb.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60501.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvariasCntr.aspx.designer.vb">
+      <DependentUpon>AvariasCntr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvariasCntr.aspx.vb">
+      <DependentUpon>AvariasCntr.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CarregaCS.aspx.designer.vb">
+      <DependentUpon>CarregaCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarregaCS.aspx.vb">
+      <DependentUpon>CarregaCS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="classes\Talie\ArmGate\AmrGateDAO.vb" />
+    <Compile Include="classes\BD.vb" />
+    <Compile Include="classes\Talie\BookingCarga\BookingCargaDAO.vb" />
+    <Compile Include="classes\Talie\CargaSoltaYard\CargaSoltaYardDAO.vb" />
+    <Compile Include="classes\Talie\Embalagem\EmbalagemDAO.vb" />
+    <Compile Include="classes\Talie\Embalagem\EmbalagemDTO.vb" />
+    <Compile Include="classes\Talie\Equipe\EquipeDAO.vb" />
+    <Compile Include="classes\Talie\Gate\GateDAO.vb" />
+    <Compile Include="classes\InventarioCS.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\InventarioCS_f2.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\Login.vb" />
+    <Compile Include="classes\OracleDAO.vb" />
+    <Compile Include="classes\Ordens.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\Talie\Parametros\ParametroDAO.vb" />
+    <Compile Include="classes\Talie\Booking\BookingDAO.vb" />
+    <Compile Include="classes\Talie\Patio\PatioCsDAO.vb" />
+    <Compile Include="classes\Talie\Registro\RegistroDAO.vb" />
+    <Compile Include="classes\Talie.vb" />
+    <Compile Include="classes\Talie\TalieDAO.vb" />
+    <Compile Include="classes\Talie\TalieDescargaDTO.vb" />
+    <Compile Include="classes\Talie\TalieItemResumoDTO.vb" />
+    <Compile Include="classes\Talie\TalieItemDTO.vb" />
+    <Compile Include="classes\Talie\TalieDTO.vb" />
+    <Compile Include="classes\Talie\TalieItemDAO.vb" />
+    <Compile Include="classes\Talie\TalieRegistroDAO.vb" />
+    <Compile Include="ControleAcesso.vb" />
+    <Compile Include="Fotos.aspx.designer.vb">
+      <DependentUpon>Fotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fotos.aspx.vb">
+      <DependentUpon>Fotos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DesovaDatas.aspx.designer.vb">
+      <DependentUpon>DesovaDatas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesovaDatas.aspx.vb">
+      <DependentUpon>DesovaDatas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Estufagem.aspx.designer.vb">
+      <DependentUpon>Estufagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estufagem.aspx.vb">
+      <DependentUpon>Estufagem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FotosColetor.aspx.designer.vb">
+      <DependentUpon>FotosColetor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FotosColetor.aspx.vb">
+      <DependentUpon>FotosColetor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmMarcanteRDX.aspx.designer.vb">
+      <DependentUpon>frmMarcanteRDX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcanteRDX.aspx.vb">
+      <DependentUpon>frmMarcanteRDX.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmMarcante.aspx.designer.vb">
+      <DependentUpon>frmMarcante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcante.aspx.vb">
+      <DependentUpon>frmMarcante.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventarioCego.aspx.designer.vb">
+      <DependentUpon>InventarioCego.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCego.aspx.vb">
+      <DependentUpon>InventarioCego.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventarioCNTR.aspx.designer.vb">
+      <DependentUpon>InventarioCNTR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCNTR.aspx.vb">
+      <DependentUpon>InventarioCNTR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventarioCSF2_new.aspx.designer.vb">
+      <DependentUpon>InventarioCSF2_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCSF2_new.aspx.vb">
+      <DependentUpon>InventarioCSF2_new.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DDC.aspx.designer.vb">
+      <DependentUpon>DDC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDC.aspx.vb">
+      <DependentUpon>DDC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OperacaoSemCores.aspx.designer.vb">
+      <DependentUpon>OperacaoSemCores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperacaoSemCores.aspx.vb">
+      <DependentUpon>OperacaoSemCores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Operacao.aspx.designer.vb">
+      <DependentUpon>Operacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operacao.aspx.vb">
+      <DependentUpon>Operacao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.vb">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.vb">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventarioCS.aspx.designer.vb">
+      <DependentUpon>InventarioCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCS.aspx.vb">
+      <DependentUpon>InventarioCS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Service References\DesovaService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Avarias.aspx.designer.vb">
+      <DependentUpon>Avarias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Avarias.aspx.vb">
+      <DependentUpon>Avarias.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Service References\loginMicroled\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Talie\TalieDescargaItens.aspx.designer.vb">
+      <DependentUpon>TalieDescargaItens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Talie\TalieDescargaItens.aspx.vb">
+      <DependentUpon>TalieDescargaItens.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Talie\TalieDescargaRegistro.aspx.designer.vb">
+      <DependentUpon>TalieDescargaRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Talie\TalieDescargaRegistro.aspx.vb">
+      <DependentUpon>TalieDescargaRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Talie_Observacao.aspx.designer.vb">
+      <DependentUpon>Talie_Observacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Talie_Observacao.aspx.vb">
+      <DependentUpon>Talie_Observacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="windowSize.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AvariasCntr.aspx" />
+    <Content Include="BrowserWindowSize.js" />
+    <Content Include="CarregaCS.aspx" />
+    <Content Include="css\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\Talie\talieRedexItens.min.css" />
+    <Content Include="css\Talie\talieRedexRegistro.min.css" />
+    <Content Include="css\Talie\talieRedexRegistro.css" />
+    <Content Include="css\Talie\talieRedexItens.css" />
+    <Content Include="Fotos.aspx" />
+    <Content Include="DesovaDatas.aspx" />
+    <Content Include="Estufagem.aspx" />
+    <Content Include="FotosColetor.aspx" />
+    <Content Include="frmMarcanteRDX.aspx" />
+    <Content Include="frmMarcante.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="imagens\back.png" />
+    <Content Include="imagens\btn_anterior.png" />
+    <Content Include="imagens\btn_proximo.png" />
+    <Content Include="imagens\cancelar.png" />
+    <Content Include="imagens\Capturar.JPG" />
+    <Content Include="imagens\Capturar.PNG" />
+    <Content Include="imagens\editar.gif" />
+    <Content Include="imagens\forward.png" />
+    <Content Include="imagens\icone_camera.png" />
+    <Content Include="imagens\icone_lixeira.png" />
+    <Content Include="imagens\nav1.png" />
+    <Content Include="imagens\nav2.png" />
+    <Content Include="imagens\nav3.png" />
+    <Content Include="imagens\nav4.png" />
+    <Content Include="InventarioCego.aspx" />
+    <Content Include="InventarioCNTR.aspx" />
+    <Content Include="InventarioCSF2_new.aspx" />
+    <Content Include="DDC.aspx" />
+    <Content Include="lib\dispose.js" />
+    <Content Include="lib\jquery-1.12.4.min.js" />
+    <Content Include="lib\jquery.maskedinput.min.js" />
+    <Content Include="lib\json2.js" />
+    <Content Include="lib\json_parse.js" />
+    <Content Include="lib\Talie\talieRedexItens.js" />
+    <Content Include="lib\Talie\talieRedexRegistro.js" />
+    <Content Include="OperacaoSemCores.aspx" />
+    <Content Include="Operacao.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="InventarioCS.aspx" />
+    <Content Include="Avarias.aspx" />
+    <Content Include="lib\json2.min.js" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="imagens\cadeado.png" />
+    <Content Include="imagens\red_login_button_lg.png" />
+    <Content Include="lib\default.js" />
+    <Content Include="lib\jquery-1.7.1.min.js" />
+    <Content Include="lib\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="lib\jquery.alphanumeric.js" />
+    <Content Include="lib\jquery.maskedinput-1.2.2.min.js" />
+    <Content Include="lib\jquery.maskMoney.js" />
+    <Content Include="lib\jquery.numeric.js" />
+    <Content Include="lib\jquery.ui.datepicker.js" />
+    <Content Include="lib\shortcut.js" />
+    <Content Include="packages.config" />
+    <None Include="Service References\DesovaService\Coletor.DesovaService.ResponseLoadInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DesovaService\Coletor.DesovaService.ResponseStart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DesovaService\Coletor.DesovaService.ResponseStop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DesovaService\configuration91.svcinfo" />
+    <None Include="Service References\DesovaService\configuration.svcinfo" />
+    <None Include="Service References\DesovaService\DesovaService1.wsdl" />
+    <None Include="Service References\DesovaService\DesovaService9.xsd" />
+    <None Include="Service References\DesovaService\DesovaService91.xsd" />
+    <None Include="Service References\DesovaService\DesovaService92.xsd" />
+    <None Include="Service References\DesovaService\DesovaService93.xsd" />
+    <None Include="Service References\DesovaService\DesovaService94.xsd" />
+    <None Include="Service References\DesovaService\DesovaService95.xsd" />
+    <None Include="Service References\DesovaService\DesovaService96.xsd" />
+    <None Include="Service References\DesovaService\DesovaService97.xsd" />
+    <None Include="Service References\DesovaService\DesovaService98.xsd" />
+    <None Include="Service References\DesovaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\DesovaService\DesovaService.disco" />
+    <None Include="Service References\loginMicroled\configuration91.svcinfo" />
+    <None Include="Service References\loginMicroled\configuration.svcinfo" />
+    <None Include="Service References\loginMicroled\Criptografia.wsdl" />
+    <None Include="Service References\loginMicroled\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\loginMicroled\Criptografia.disco" />
+    <Content Include="Talie\TalieDescargaItens.aspx" />
+    <Content Include="Talie\TalieDescargaRegistro.aspx" />
+    <Content Include="Talie_Observacao.aspx" />
+    <Content Include="web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DesovaService\" />
+    <WCFMetadataStorage Include="Service References\loginMicroled\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4124</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51244/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

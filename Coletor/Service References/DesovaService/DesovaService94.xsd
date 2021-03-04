@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.1.50.108:7021/DesovaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests.MobileServices" />
+  <xs:import schemaLocation="http://10.1.50.108:7021/DesovaService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.MobileServices" />
+  <xs:element name="StartRecording">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests.MobileServices" minOccurs="0" name="request" nillable="true" type="q1:RequestStart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartRecordingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.MobileServices" minOccurs="0" name="StartRecordingResult" nillable="true" type="q2:ResponseStart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopRecording">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests.MobileServices" minOccurs="0" name="request" nillable="true" type="q3:RequestStop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopRecordingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.MobileServices" minOccurs="0" name="StopRecordingResult" nillable="true" type="q4:ResponseStop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.MobileServices" minOccurs="0" name="LoadInfoResult" nillable="true" type="q5:ResponseLoadInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

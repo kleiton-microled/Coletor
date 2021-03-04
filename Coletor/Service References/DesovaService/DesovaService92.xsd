@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests.MobileServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests.MobileServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.1.50.108:7021/DesovaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests" />
+  <xs:complexType name="RequestStart">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Container" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Position" type="xs:int" />
+          <xs:element minOccurs="0" name="idCamera" type="xs:int" />
+          <xs:element minOccurs="0" name="idOperationType" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestStart" nillable="true" type="tns:RequestStart" />
+  <xs:complexType name="RequestStop">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Requests" base="q2:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdCamera" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTimeline" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestStop" nillable="true" type="tns:RequestStop" />
+</xs:schema>

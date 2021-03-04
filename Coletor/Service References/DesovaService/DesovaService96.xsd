@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.Camera" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses.Camera" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.1.50.108:7021/DesovaService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses" />
+  <xs:complexType name="ArrayOfResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Response" nillable="true" type="tns:Response" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponse" nillable="true" type="tns:ArrayOfResponse" />
+  <xs:complexType name="Response">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Desova.Shared.Model.DTO.Responses" base="q1:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="descriptionCamera" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idCamera" type="xs:int" />
+          <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="passwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="positions" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="uri" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+</xs:schema>
