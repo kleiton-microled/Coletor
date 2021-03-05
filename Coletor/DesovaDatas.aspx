@@ -10,11 +10,12 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/style1.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/uikit.css" />
     <script src="lib/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/uikit.js" type="text/javascript"></script>
     <script type="text/javascript" src="../lib/dispose.js"></script>
 
-    <!-- <style type="text/css">
+    <!--<style type="text/css"> 
         .style21 {
             width: 447px;
             height: 613px;
@@ -403,156 +404,79 @@
             <asp:Label ID="lblTitulo" runat="server" Font-Bold="True" Text="DESOVA DE CONTÊINER"></asp:Label>
         </div>
         <form id="form2" runat="server">
-        <div id="Menu"  class="menu">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="cbConteiner">Selecione um container</label>
+        <div class="conteudo">
+            <div class="">
+                <button class="uk-button button-ecoporto uk-width-expand" type="button">Selecione um container</button>
+                <asp:DropDownList uk-dropdown="mode: click" class="uk-width-1-2 " runat="server" ID="cbConteiner" TabIndex="2" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <form class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1">
+                    <label for="txtYard" class="uk-text-bold">Posição</label>
+                    <asp:TextBox ID="txtYard" class="uk-input" runat="server"></asp:TextBox>
                 </div>
-                <asp:DropDownList runat="server" ID="cbConteiner" TabIndex="2" AutoPostBack="True"></asp:DropDownList>
-              </div>
-              
+                <div class="uk-width-1-2@s">
+                    <label for="txtCamera" class="uk-text-bold">Camera</label>
+                    <asp:TextBox ID="txtCamera" class="uk-input" runat="server"></asp:TextBox>
+                </div>
+                <div class="uk-width-1-4@s">
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                                <asp:ListItem class="uk-text-bold" >Manual</asp:ListItem>
+                                <asp:ListItem class="uk-text-bold">Mecanico</asp:ListItem>
+                        </asp:RadioButtonList>
+                </div>
+                <div class="uk-width-1-4@s">
+                    <label for="txtDtInicio" class="uk-text-bold">DT. Inicio</label>
+                    <asp:TextBox ID="txtDtInicio" runat="server" class="uk-input"  ReadOnly="True">__/__ __:__</asp:TextBox>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <label for="txtDtFim" class="uk-text-bold">DT. Fim</label>
+                    <asp:TextBox ID="txtDtFim" runat="server" class="uk-input" ReadOnly="True">__/__ __:__</asp:TextBox>
+                </div>
+                <div class="uk-width-1-1@s">
+                    <label for="txtEtiquetas" class="uk-text-bold">Etiquetas</label>
+                    <asp:TextBox class="uk-textarea" textMode="multiline" ID="txtEtiquetas"  rows="3" runat="server" ></asp:TextBox>
+                </div>
+                <div class="uk-width-1-1@s">
+                    <label for="txtEtiquetas" class="uk-text-bold">Observações</label>
+                    <asp:TextBox ID="txtObs" textMode="multiline" class="uk-textarea" rows="3" runat="server"  ></asp:TextBox>
+            </form>
         </div>
-        
+        <div class="menu-buttons uk-grid-small">
+            <asp:Button ID="btnFotos" class="uk-button button-ecoporto uk-button-large" runat="server" Text="FOTOS" />
+            <asp:Button ID="btIni"  class="uk-button uk-button-default uk-button-large" runat="server" Text="INÍCIO"  />
+            <asp:Button ID="btFim" class="uk-button uk-button-default uk-button-large" runat="server" Text="TÉRMINO"  />
+            <asp:Button ID="btSair" class="uk-button uk-button-default uk-button-large" runat="server" Text="VOLTAR" />
+        </div>
+    </div>
         <asp:ScriptManager runat="server"></asp:ScriptManager>
-        
-        <table bgcolor="#5D7B9D">
-            <tr>
-                <td class="auto-style40" width="25%" height="8%">
-                    <strong><span class="auto-style34">CONTÊINER</span>:</strong></td>
-                <td class="auto-style21" height="8%">
-                    <strong>
-                        
-
-                    </strong>
-
-                </td>
-                <td class="auto-style42" width="20%" height="8%">
-                    <strong style="width: 20%"><span class="auto-style35">POSICÃO</span><span class="auto-style29">:</span></strong></td>
-                <td class="auto-style43" width="20%" height="8%">
-                    <asp:TextBox ID="txtYard" runat="server" BackColor="#CCCCCC" BorderWidth="0px"
-                        Height="80%" Width="100%" Font-Bold="True" CssClass="auto-style4"
-                        Font-Size="Medium"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style40" width="25%" height="8%">
-                    <strong>DT. INÍCIO:</strong></td>
-                <td class="auto-style41" height="8%">
-                    <asp:TextBox ID="txtDtInicio" runat="server" BackColor="#CCCCCC" BorderWidth="0px"
-                        Height="80%" Width="100%" Font-Bold="True" ReadOnly="True"
-                        CssClass="auto-style4" Font-Size="Medium">__/__ __:__</asp:TextBox>
-                </td>
-                <td class="auto-style31" width="20%" height="8%">
-                    <strong style="width: 20%"><span class="auto-style34">CÂMERA</span>:</strong></td>
-                <td class="auto-style43" width="20%" height="8%">
-                    <asp:TextBox ID="txtCamera" runat="server" BackColor="White" BorderWidth="0px"
-                        Height="80%" Width="100%" Font-Bold="True" CssClass="auto-style4"
-                        Font-Size="Medium"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style40" width="25%" height="8%">
-                    <strong>DT.TÉRMINO</strong></td>
-                <td class="auto-style41" height="8%">
-                    <asp:TextBox ID="txtDtFim" runat="server" BackColor="#CCCCCC" BorderWidth="0px"
-                        Height="80%" Width="100%" Font-Bold="True" ReadOnly="True"
-                        CssClass="auto-style4" Font-Size="Medium">__/__ __:__</asp:TextBox>
-                </td>
-                <td class="auto-style42" width="20%" height="8%">
-                    <asp:TextBox ID="txtIDTimeLine" runat="server" BackColor="Yellow" BorderWidth="0px"
+        <asp:TextBox ID="txtIDTimeLine" runat="server" BackColor="Yellow" BorderWidth="0px"
                         Height="16px" Width="54px" Font-Bold="True" CssClass="style23"
                         Visible="False"></asp:TextBox>
                     <asp:TextBox ID="TXTOC" runat="server" BackColor="Yellow" BorderWidth="0px"
                         Height="16px" Width="54px" Font-Bold="True" CssClass="style23"
                         Visible="False"></asp:TextBox>
-                </td>
-                <td class="auto-style7" width="20%" height="8%">
-                    <strong>
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" CssClass="style39"
-                            Width="93%" Font-Size="14px" Height="35px">
-                            <asp:ListItem>Manual</asp:ListItem>
-                            <asp:ListItem>Mecan.</asp:ListItem>
-                        </asp:RadioButtonList>
-                    </strong></td>
-            </tr>
-            <tr>
-                <td class="auto-style40" width="25%" height="8%" style="height: 8%">
-                    <asp:Label ID="lblPlaca" runat="server" Font-Bold="True" Font-Italic="False" Text="PLACA"></asp:Label>
-                </td>
-                <td class="auto-style41" height="8%" style="height: 8%" colspan="3">
-                    <strong>
+                        <asp:Label ID="lblPlaca" runat="server" Font-Bold="True" Font-Italic="False" Text="PLACA"></asp:Label>
                         <asp:DropDownList runat="server" Font-Names="Tahoma"
                             Font-Size="Large" Height="60%" Width="100%" ID="cbPlaca"
                             TabIndex="2" CssClass="style144" AutoPostBack="True"
                             Font-Bold="True" Style="font-size: large">
                         </asp:DropDownList>
-
-                    </strong>
-
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style36" height="22%" style="height: 22%" width="100%">
-                    <strong style="height: 22%"><span class="auto-style34">OBS</span>:<br />
-                    <br />
-                    <asp:Button ID="btnFotos" runat="server" BackColor="#5D7B9D"
-                        BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"
-                        Font-Bold="True" Font-Names="Tahoma" Font-Size="10px" ForeColor="White"
-                        Height="60px" Text="FOTOS" Width="100%" Style="font-size: medium; text-align:center" />
-                    </strong></td>
-                <td class="auto-style18" colspan="3" height="22%" style="height: 22%" width="100%">
-                    <strong style="width: 80%; height: 22%;">
-                        <asp:TextBox ID="txtEtiquetas" runat="server" BackColor="#CCCCCC" BorderWidth="0px"
-                            Height="90%" Width="100%" CssClass="auto-style30" MaxLength="150"
-                            TextMode="MultiLine" Font-Size="Medium" Enabled="False"></asp:TextBox>
-                    </strong>
-                </td>
-            </tr>
-            <tr style="width: 100%" align="center">
-                <td class="auto-style3" style="height: 10%;" height="10%">
-                    <asp:Button ID="btIni" runat="server" BackColor="#5D7B9D"
-                        BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"
-                        Font-Bold="True" Font-Names="Tahoma" Font-Size="10px" ForeColor="White"
-                        Height="60px" Text="INÍCIO" Width="100%" Style="font-size: medium; text-align: center" />
-                </td>
-                <td class="auto-style32" height="10%">
-                    <asp:Button ID="btFim" runat="server" BackColor="#5D7B9D"
-                        BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"
-                        Font-Bold="True" Font-Names="Tahoma" Font-Size="10px" ForeColor="White"
-                        Height="60px" Text="TÉRMINO" Width="100%" Style="font-size: medium; margin-left: 0; text-align:center" />
-                </td>
-                <td class="auto-style20" height="10%">
-                    <asp:Button ID="btDDCItens" runat="server" BackColor="#5D7B9D"
+        
+        <asp:Button ID="btDDCItens" runat="server" BackColor="#5D7B9D"
                         BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"
                         Font-Bold="True" Font-Names="Tahoma" Font-Size="10px" ForeColor="White"
                         Height="60px" Text="ITENS" Width="100%" Style="font-size: medium" />
-                </td>
-                <td width="20%" height="10%" style="height: 10%" class="auto-style44">
-                    <asp:Button ID="btSair" runat="server" BackColor="#5D7B9D"
-                        BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"
-                        Font-Bold="True" Font-Names="Tahoma" Font-Size="10px" ForeColor="White"
-                        Height="60px" Text="VOLTAR" Width="100%" Style="font-size: medium; text-align: center" />
-                </td>
-            </tr>
-        </table>
-
-        <%--</div>--%>
-
-        <asp:Panel ID="pnConfirma" runat="server" Visible="true" Style="background: white; font-family: Tahoma; font-size: 13px;"
-            Width="400px" BackColor="#CCCCCC">
-            <div align="center" style="background: #FFF68F; padding: 10px; padding: 10px;">
+        
+        <asp:Panel ID="pnConfirma" runat="server" Visible="true" class="uk-card uk-width-1-1">
+            <div align="center" class="uk-alert uk-width-1-1">
                 <asp:Label ID="lblAlerta" runat="server" Text="Atenção: Existem lotes ainda não desovados. Deseja Continuar ? "></asp:Label>
                 <br />
                 <br />
-                <asp:Button ID="btnConfirmar" runat="server" Text="Sim" UseSubmitBehavior="false" />
-                &nbsp;<asp:Button ID="btnFecharConfirm" runat="server" Text="Não" UseSubmitBehavior="false" />
+                <asp:Button ID="btnConfirmar" runat="server" Text="Sim" UseSubmitBehavior="false" class="uk-button-primary uk-button-large" />
+                &nbsp;<asp:Button ID="btnFecharConfirm" runat="server" Text="Não" UseSubmitBehavior="false" class="uk-button-danger uk-button-large" />
             </div>
         </asp:Panel>
-
-
-
-        <asp:Panel ID="pnYard" runat="server" Visible="true" Style="background: white; font-family: Tahoma; font-size: 13px;"
-            Width="400px" BackColor="#CCCCCC">
+        <asp:Panel ID="pnYard" runat="server" Visible="true">
             <div align="center" style="background: #FFF68F; padding: 10px; padding: 10px;">
                 <b>Existem Lotes pendentes de posição no inventário.
                     <br />
@@ -562,7 +486,6 @@
                 &nbsp;<asp:Button ID="btnFecharConfirmYrd" runat="server" Text="Não" UseSubmitBehavior="false" />
             </div>
         </asp:Panel>
-
         <cc1:modalpopupextender id="ModalPopupExtender1" runat="server"
             cancelcontrolid="btnConfirmar" dropshadow="true" popupcontrolid="pnConfirma" x="20"
             popupdraghandlecontrolid="pnConfirma" targetcontrolid="btnFecharConfirm" okcontrolid="btnConfirmar">
@@ -572,12 +495,6 @@
             cancelcontrolid="btnConfirmarYrd" dropshadow="true" popupcontrolid="pnYard" x="20"
             popupdraghandlecontrolid="pnYard" targetcontrolid="btnFecharConfirmYrd" okcontrolid="btnConfirmarYrd">
         </cc1:modalpopupextender>
-
-
-
-
-
     </form>
-    </div>
 </body>
 </html>
