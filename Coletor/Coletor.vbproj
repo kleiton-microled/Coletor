@@ -164,6 +164,13 @@
     <Compile Include="classes\Talie\TalieItemDAO.vb" />
     <Compile Include="classes\Talie\TalieRegistroDAO.vb" />
     <Compile Include="ControleAcesso.vb" />
+    <Compile Include="EstufagemNew.aspx.designer.vb">
+      <DependentUpon>EstufagemNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstufagemNew.aspx.vb">
+      <DependentUpon>EstufagemNew.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Fotos.aspx.designer.vb">
       <DependentUpon>Fotos.aspx</DependentUpon>
     </Compile>
@@ -350,6 +357,7 @@
     <Content Include="css\Talie\talieRedexRegistro.min.css" />
     <Content Include="css\Talie\talieRedexRegistro.css" />
     <Content Include="css\Talie\talieRedexItens.css" />
+    <Content Include="EstufagemNew.aspx" />
     <Content Include="Fotos.aspx" />
     <Content Include="DesovaDatas.aspx" />
     <Content Include="Estufagem.aspx" />
