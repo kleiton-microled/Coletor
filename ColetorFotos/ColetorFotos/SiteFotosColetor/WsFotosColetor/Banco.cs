@@ -14,7 +14,6 @@ namespace WsFotosColetor
                 return con.Query<string>("SELECT DIR_COLETOR_FOTOS FROM SGIPA.TB_PARAMETROS_SISTEMA").FirstOrDefault();
             }
         }
-
         public void GravarFoto(Foto foto)
         {
             using (OracleConnection con = new OracleConnection(Configs.StringConexao()))

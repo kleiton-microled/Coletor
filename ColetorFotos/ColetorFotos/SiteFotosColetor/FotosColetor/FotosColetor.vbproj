@@ -146,6 +146,13 @@
       <DependentUpon>Fotos.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="FotosNew.aspx.designer.vb">
+      <DependentUpon>FotosNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FotosNew.aspx.vb">
+      <DependentUpon>FotosNew.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +197,7 @@
     <Content Include="css\images\ui-icons_555555_256x240.png" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="Fotos.aspx" />
+    <Content Include="FotosNew.aspx" />
     <Content Include="Global.asax" />
     <Content Include="imagens\back.png" />
     <Content Include="imagens\btn_anterior.png" />

@@ -1108,7 +1108,15 @@
     Protected Sub btnFotos_Click(sender As Object, e As EventArgs) Handles btnFotos.Click
         Dim OrdensOBJ As New Ordens
 
+        If (Me.cbLotes.SelectedIndex = -1) Then
+            ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Contêiner.');</script>", False)
+            Exit Sub
+        End If
         OrdensOBJ.Lote = Me.cbLotes.SelectedValue
+        If (Me.cbConteiner.SelectedIndex = -1) Then
+            ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Lote.');</script>", False)
+            Exit Sub
+        End If
         OrdensOBJ.Autonum_Cntr = Me.cbConteiner.SelectedValue
         If Val(OrdensOBJ.Autonum_Cntr) = 0 Then
             ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Contêiner.');</script>", False)
@@ -1120,7 +1128,11 @@
         End If
 
         Dim url As String = ConfigurationManager.AppSettings("UrlSiteFotos").ToString()
-        Response.Redirect(url & "/Fotos.aspx?idTipoProcesso=1&autonumCntrBl=" & OrdensOBJ.Autonum_Cntr & "&autonumPatio=" & Session("PATIO") & "&lote=" & OrdensOBJ.Lote & "&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0")
+        'Response.Write("<script>")
+        'Response.Write("window.open("url & "'/Fotos.aspx?idTipoProcesso=1&autonumCntrBl=" & OrdensOBJ.Autonum_Cntr & "&autonumPatio=" & Session("PATIO") & "&lote=" & OrdensOBJ.Lote & "&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank')")
+        'Response.Write("</script>")
+        'Response.Redirect(url & "/Fotos.aspx?idTipoProcesso=1&autonumCntrBl=" & OrdensOBJ.Autonum_Cntr & "&autonumPatio=" & Session("PATIO") & "&lote=" & OrdensOBJ.Lote & "&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0")
+        Response.Write("<script>window.open('" + url + "/Fotos.aspx?idTipoProcesso=1&autonumCntrBl=" & OrdensOBJ.Autonum_Cntr & "&autonumPatio=" & Session("PATIO") & "&lote=" & OrdensOBJ.Lote & "&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank');</script>")
     End Sub
 
 End Class
