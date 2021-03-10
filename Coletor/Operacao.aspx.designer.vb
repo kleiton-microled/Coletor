@@ -77,13 +77,13 @@ Partial Public Class WebForm1
     Protected WithEvents TxtQtde As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtMercadoria control.
+    '''TxtMercadoria control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtMercadoria As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtMercadoria As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtVolume control.
@@ -176,13 +176,13 @@ Partial Public Class WebForm1
     Protected WithEvents txtTempAnvisaMax As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtANVISA control.
+    '''txtAnvisa control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtANVISA As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtAnvisa As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ckHubPort control.
@@ -239,15 +239,6 @@ Partial Public Class WebForm1
     Protected WithEvents txtMarcante As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lstMarcantes control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lstMarcantes As Global.System.Web.UI.WebControls.ListBox
-
-    '''<summary>
     '''TxtQtdeM control.
     '''</summary>
     '''<remarks>
@@ -257,33 +248,6 @@ Partial Public Class WebForm1
     Protected WithEvents TxtQtdeM As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btAdd control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btAdd As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btRem control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btRem As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btSalvar0 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSalvar0 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''txtEtiquetas control.
     '''</summary>
     '''<remarks>
@@ -291,6 +255,15 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtEtiquetas As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lstMarcantes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lstMarcantes As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
     '''txtTerminal control.
@@ -329,15 +302,6 @@ Partial Public Class WebForm1
     Protected WithEvents txtDtFim As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnFotos control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnFotos As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''txtDtFim0 control.
     '''</summary>
     '''<remarks>
@@ -354,42 +318,6 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridDesovas As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''btSalvar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSalvar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btLogOff control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btLogOff As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btSair control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSair As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btSair0 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSair0 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''TxtQtdeM0 control.
@@ -471,4 +399,76 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
+    '''btnFotos control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnFotos As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSalvar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSalvar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btLogOff control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btLogOff As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSair control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSair As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSair0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSair0 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSalvar0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSalvar0 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btAdd control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btAdd As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btRem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btRem As Global.System.Web.UI.WebControls.Button
 End Class

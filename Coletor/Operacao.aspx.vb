@@ -1108,16 +1108,17 @@
     Protected Sub btnFotos_Click(sender As Object, e As EventArgs) Handles btnFotos.Click
         Dim OrdensOBJ As New Ordens
 
-        If (Me.cbLotes.SelectedIndex = -1) Then
+        If (Me.cbConteiner.SelectedIndex = -1 Or Me.cbConteiner.SelectedIndex = 0) Then
             ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Contêiner.');</script>", False)
             Exit Sub
         End If
-        OrdensOBJ.Lote = Me.cbLotes.SelectedValue
-        If (Me.cbConteiner.SelectedIndex = -1) Then
+        OrdensOBJ.Autonum_Cntr = Me.cbConteiner.SelectedValue
+        If (Me.cbLotes.SelectedIndex = -1 Or Me.cbLotes.SelectedIndex = 0) Then
             ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Lote.');</script>", False)
             Exit Sub
         End If
-        OrdensOBJ.Autonum_Cntr = Me.cbConteiner.SelectedValue
+        OrdensOBJ.Lote = Me.cbLotes.SelectedValue
+
         If Val(OrdensOBJ.Autonum_Cntr) = 0 Then
             ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Contêiner.');</script>", False)
             Exit Sub
