@@ -223,6 +223,13 @@
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="InventarioCargaSoltaDemo.aspx.designer.vb">
+      <DependentUpon>InventarioCargaSoltaDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCargaSoltaDemo.aspx.vb">
+      <DependentUpon>InventarioCargaSoltaDemo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="InventarioCego.aspx.designer.vb">
       <DependentUpon>InventarioCego.aspx</DependentUpon>
     </Compile>
@@ -379,6 +386,7 @@
     <Content Include="imagens\nav2.png" />
     <Content Include="imagens\nav3.png" />
     <Content Include="imagens\nav4.png" />
+    <Content Include="InventarioCargaSoltaDemo.aspx" />
     <Content Include="InventarioCego.aspx" />
     <Content Include="InventarioCNTR.aspx" />
     <Content Include="InventarioCSF2_new.aspx" />

@@ -16,7 +16,6 @@
             <p>CHRONOS MOBILE - ARMAZEM - TERMINAL: <asp:label ID="lblTerminal"  runat="server"></asp:label></p>
             <div id="user" class="user"><p>Bem vindo, </p>
             <asp:label ID="lblUsuario"  runat="server"></asp:label>
-            
             </div>
         </div>
         <form id="form1" runat="server">
@@ -29,7 +28,7 @@
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni3" runat="server" Text="5 - IDENTIFICAÇÃO DO LOTE" ></asp:button></p></li>
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni8" runat="server" Text="6 - INVENTARIO DE CARGA SOLTA" ></asp:button></p></li>
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni4" runat="server" Text="7 - MARCANTES CARGA SOLTA" ></asp:button></p></li>
-                <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni0" runat="server" Text="8 - MARCANTES CARGA SOLTA" ></asp:button></p></li>
+                <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni0" runat="server" Text="8 - MOVIMENTAÇÃO CARGA SOLTA" ></asp:button></p></li>
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni2" runat="server" Text="9 - MOVIMENTAÇÃO CONTAINER" ></asp:button></p></li>
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni9" runat="server" Text="10 - DDC - DESOVA DIRETA CAM" ></asp:button></p></li>
                 <li class="button"><p class="textbutton"><asp:button class="textbutton" ID="btIni1" runat="server" Text="7 - LOG OFF" ></asp:button></p></li>

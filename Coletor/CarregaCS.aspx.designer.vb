@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class CarregaCS
-    
+
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -21,25 +21,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
-    '''<summary>
-    '''HiddenField1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents HiddenField1 As Global.System.Web.UI.WebControls.HiddenField
-    
-    '''<summary>
-    '''Label1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''cbVeiculo control.
     '''</summary>
@@ -48,34 +30,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cbVeiculo As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''btSalvar0 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSalvar0 As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''Atualizar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Atualizar As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''Label2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''GridOC control.
     '''</summary>
@@ -84,16 +39,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridOC As Global.System.Web.UI.WebControls.GridView
-    
-    '''<summary>
-    '''Label3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''GridCarregamento control.
     '''</summary>
@@ -102,7 +48,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridCarregamento As Global.System.Web.UI.WebControls.GridView
-    
+
     '''<summary>
     '''txtMarcante control.
     '''</summary>
@@ -111,7 +57,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtMarcante As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''txtAutonumCS control.
     '''</summary>
@@ -120,52 +66,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtAutonumCS As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtLocal control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtLocal As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtLote control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtLote As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtQtde control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtQtde As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''btSalvar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSalvar As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''btSair control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btSair As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''txtAutonumArmazem control.
     '''</summary>
@@ -174,7 +75,7 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtAutonumArmazem As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''txtAutonum_cs_Yard control.
     '''</summary>
@@ -183,4 +84,76 @@ Partial Public Class CarregaCS
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtAutonum_cs_Yard As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtLocal control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtLocal As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtLote control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtLote As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtQtde control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtQtde As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnFotos control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnFotos As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSalvar0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSalvar0 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Atualizar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Atualizar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSair control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSair As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btSalvar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btSalvar As Global.System.Web.UI.WebControls.Button
 End Class

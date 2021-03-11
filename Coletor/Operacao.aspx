@@ -100,7 +100,6 @@
                                 <asp:DropDownList runat="server" ID="cbItem" TabIndex="2" AutoPostBack="True"
                                     class="uk-select">
                                 </asp:DropDownList>
-                                <asp:TextBox ID="txtMarca" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="uk-width-1-2@l">
@@ -114,16 +113,20 @@
                         <div class="uk-width-1-6@l">
                             <labe class="uk-form-label" for="TxtQtde">QUANTIDADE</labe>
                             <asp:TextBox ID="TxtQtde" runat="server" class="uk-input"></asp:TextBox>
-                            <asp:TextBox ID="TxtMercadoria" runat="server"></asp:TextBox>
+                            <labe class="uk-label" for="TxtQtde">mercadoria</labe>
+                            <asp:TextBox ID="TxtMercadoria" runat="server" class="uk-form-small"></asp:TextBox>
                         </div>
                         <div class="uk-width-1-6@l">
                             <labe class="uk-form-label" for="txtVolume">VOLUME</labe>
                             <asp:TextBox ID="txtVolume" runat="server" class="uk-input"></asp:TextBox>
-                            <asp:TextBox ID="txtImportador" runat="server"></asp:TextBox>
+                            <labe class="uk-label" for="txtImportador">importador</labe>
+                            <asp:TextBox ID="txtImportador" runat="server" class="uk-form-small"></asp:TextBox>
                         </div>
                         <div class="uk-width-1-6@l">
                             <labe class="uk-form-label" for="txtPesoBruto">PESO.LOTE</labe>
                             <asp:TextBox ID="txtPesoBruto" runat="server" class="uk-input"></asp:TextBox>
+                            <labe class="uk-label" for="txtMarca">marca</labe>
+                            <asp:TextBox ID="txtMarca" runat="server" class="uk-form-small"></asp:TextBox>
                         </div>
                         <div class="uk-width-1-6@l">
                             <labe class="uk-form-label" for="txtIMO">IMO</labe>
