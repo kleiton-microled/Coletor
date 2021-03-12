@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class TalieDescargaRegistro
-    
+
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -21,16 +21,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
-    '''<summary>
-    '''lblCarregando control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblCarregando As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''txtTalie control.
     '''</summary>
@@ -39,16 +30,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtTalie As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''LBStatusTalie control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents LBStatusTalie As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''TxtInicio control.
     '''</summary>
@@ -57,7 +39,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtInicio As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''TxtFim control.
     '''</summary>
@@ -66,7 +48,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtFim As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''TxtRegistro control.
     '''</summary>
@@ -75,7 +57,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtRegistro As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''btnBuscarRegistro control.
     '''</summary>
@@ -84,16 +66,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnBuscarRegistro As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''TxtPlaca control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TxtPlaca As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''btnRetornarDados control.
     '''</summary>
@@ -102,7 +75,16 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRetornarDados As Global.System.Web.UI.WebControls.Button
-    
+
+    '''<summary>
+    '''TxtPlaca control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TxtPlaca As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''TxtReserva control.
     '''</summary>
@@ -111,7 +93,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtReserva As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''TxtCliente control.
     '''</summary>
@@ -120,7 +102,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtCliente As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''DC_Conferente control.
     '''</summary>
@@ -129,7 +111,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DC_Conferente As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''DC_Equipe control.
     '''</summary>
@@ -138,7 +120,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DC_Equipe As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''DC_Operacao control.
     '''</summary>
@@ -147,7 +129,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DC_Operacao As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''BtObservacao control.
     '''</summary>
@@ -156,7 +138,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtObservacao As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''BtCancelar control.
     '''</summary>
@@ -165,7 +147,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtCancelar As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''BtGravar control.
     '''</summary>
@@ -174,16 +156,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtGravar As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''Button2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''BtMc control.
     '''</summary>
@@ -192,7 +165,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtMc As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''BtExcluir control.
     '''</summary>
@@ -201,7 +174,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtExcluir As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''BtFinalizar control.
     '''</summary>
@@ -210,7 +183,16 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtFinalizar As Global.System.Web.UI.WebControls.Button
-    
+
+    '''<summary>
+    '''Button2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
+
     '''<summary>
     '''BtNext control.
     '''</summary>
@@ -219,7 +201,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtNext As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''TxtObservacao control.
     '''</summary>
@@ -228,7 +210,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtObservacao As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''btnFecharObs control.
     '''</summary>
@@ -237,7 +219,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnFecharObs As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''lblCodigoBooking control.
     '''</summary>
@@ -246,7 +228,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCodigoBooking As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''lblCodigoGate control.
     '''</summary>
@@ -255,7 +237,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCodigoGate As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''lblCodigoRegistro control.
     '''</summary>
@@ -264,7 +246,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCodigoRegistro As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''lblCodigoReserva control.
     '''</summary>
@@ -273,7 +255,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCodigoReserva As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''lblCodigoUsuario control.
     '''</summary>
@@ -282,7 +264,7 @@ Partial Public Class TalieDescargaRegistro
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCodigoUsuario As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''lblCodigoPatio control.
     '''</summary>

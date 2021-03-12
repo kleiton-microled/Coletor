@@ -172,7 +172,7 @@
 
     Protected Sub btIni9_Click(sender As Object, e As EventArgs) Handles btIni9.Click
         Session("FLAG_DDC") = 1
-        Response.Redirect("DesovaDatas.aspx")
+        Response.Redirect("DDC.aspx")
     End Sub
 
     'Protected Sub btIniTalie_Click(sender As Object, e As EventArgs) Handles btIniTalie.Click

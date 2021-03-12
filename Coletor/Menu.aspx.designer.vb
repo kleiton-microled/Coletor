@@ -23,15 +23,6 @@ Partial Public Class WebForm2
     Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
 
     '''<summary>
-    '''lblUsuario control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblUsuario As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblTerminal control.
     '''</summary>
     '''<remarks>
@@ -41,6 +32,15 @@ Partial Public Class WebForm2
     Protected WithEvents lblTerminal As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''lblUsuario control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUsuario As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''form1 control.
     '''</summary>
     '''<remarks>
@@ -48,24 +48,6 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
-    '''txtTerminal control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtTerminal As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtOpcao control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtOpcao As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btIni7 control.

@@ -8,6 +8,22 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style2.css" />
         <link rel="stylesheet" type="text/css" href="css/uikit.css" />
+        <script>
+            $(document).ready(function(){
+                $('#txtMarcante').attr('disabled', true);
+                $('#txtMarcante').removeClass('aspNetDisabled');
+                $('#txtMarcante').addClass('uk-input');
+
+                $('#txtEtiqueta').attr('disabled', true);
+                $('#txtEtiqueta').removeClass('aspNetDisabled');
+                $('#txtEtiqueta').addClass('uk-input');
+
+                $('#cbArm').attr('disabled', true);
+                $('#cbArm').removeClass('aspNetDisabled');
+                $('#cbArm').addClass('uk-select');
+                
+            });
+        </script>
     </head>
 
     <body>

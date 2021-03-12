@@ -545,10 +545,18 @@ Public Class CarregaCS
             Limpa()
             Me.txtMarcante.Text = ""
             Me.txtMarcante.Focus()
-
-
-
-
         End If
     End Sub
+
+    Protected Sub btnFotos_Click(sender As Object, e As EventArgs) Handles btnFotos.Click
+
+        ' If Val(cbVeiculo.SelectedValue) <> 0 Then
+        '     ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione um Veiculo.');</script>", False)
+        '     Exit Sub
+        ' End If
+
+        Dim url As String = ConfigurationManager.AppSettings("UrlSiteFotos").ToString()
+        Response.Write("<script>window.open('" + url + "/Fotos.aspx?idTipoProcesso=6&autonumCntrBl=" & cbVeiculo.SelectedValue & "&autonumPatio=" + Session("PATIO").ToString() + "&lote=0&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank');</script>")
+    End Sub
+
 End Class
