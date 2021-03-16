@@ -23,6 +23,15 @@ Partial Public Class WebForm1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''ScriptManager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''cbConteiner control.
     '''</summary>
     '''<remarks>
@@ -50,13 +59,112 @@ Partial Public Class WebForm1
     Protected WithEvents cbItem As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''txtMarca control.
+    '''UpdatePanelNovoItem control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtMarca As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents UpdatePanelNovoItem As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''lblLote control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblLote As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''cbEmbalagemNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbEmbalagemNovoItem As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''TxtQtdeNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TxtQtdeNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''TxtMercadoriaNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TxtMercadoriaNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtVolumeNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtVolumeNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtImportadorNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtImportadorNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtPesoBrutoNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtPesoBrutoNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtMarcaNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtMarcaNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtIMONovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIMONovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtONUNovoItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtONUNovoItem As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnSalvarNovoitem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSalvarNovoitem As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''cbEmbalagem control.
@@ -111,6 +219,15 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtPesoBruto As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtMarca control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtMarca As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtIMO control.
@@ -311,15 +428,6 @@ Partial Public Class WebForm1
     Protected WithEvents txtDtFim0 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''GridDesovas control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents GridDesovas As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
     '''TxtQtdeM0 control.
     '''</summary>
     '''<remarks>
@@ -327,6 +435,15 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TxtQtdeM0 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''GridDesovas control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridDesovas As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''pnConfirma control.
@@ -390,15 +507,6 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ModalPopupExtender1 As Global.AjaxControlToolkit.ModalPopupExtender
-
-    '''<summary>
-    '''ScriptManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
     '''btnFotos control.

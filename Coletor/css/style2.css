@@ -54,20 +54,20 @@ html, body {
     background-color: #5D7B9D;
     color: #fff;
   }
-  .button-ecoporto-fotos {
+  .button-ecoporto-save {
     background-color: #02b1a2;
     color: #fff;
     border: 1px solid transparent;
   }
   /* Hover + Focus */
-  .button-ecoporto-fotos:hover,
-  .button-ecoporto-fotos:focus {
+  .button-ecoporto-save:hover,
+  .button-ecoporto-save:focus {
     background-color:#02b1a2;
     color: #fff;
   }
   /* OnClick + Active */
-  .button-ecoporto-fotos:active,
-  .button-ecoporto-fotos.uk-active {
+  .button-ecoporto-save:active,
+  .button-ecoporto-save.uk-active {
     background-color: #02b1a2;
     color: #fff;
   }

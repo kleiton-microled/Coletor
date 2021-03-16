@@ -1,4 +1,6 @@
-﻿Public Class WebForm1
+﻿Imports Oracle.ManagedDataAccess.Client
+
+Public Class WebForm1
     Inherits System.Web.UI.Page
 
     Dim OrdensOBJ As New Ordens
@@ -200,6 +202,13 @@
         Me.cbEmbalagem.Items.Insert(0, "--Selecione uma embalagem--")
         Me.cbEmbalagem.SelectedIndex = 0
 
+        Me.cbEmbalagemNovoItem.DataTextField = "DISPLAY"
+        Me.cbEmbalagemNovoItem.DataValueField = "AUTONUM"
+        Me.cbEmbalagemNovoItem.DataSource = Ordens.CarregarCadEmbalagens(0)
+        Me.cbEmbalagemNovoItem.DataBind()
+        Me.cbEmbalagemNovoItem.Items.Insert(0, "--Selecione uma embalagem--")
+        Me.cbEmbalagemNovoItem.SelectedIndex = 0
+
     End Sub
 
 
@@ -263,7 +272,7 @@
         Me.ckIDFA.Checked = False
         Me.ckAvaria.Checked = False
         Me.ckAcrescimo.Checked = False
-        Me.txtANVISA.Text = ""
+        Me.txtAnvisa.Text = ""
         Me.ckAnvisa.Checked = False
         Me.txtTempAnvisa.Text = ""
         Me.txtTempAnvisaMax.Text = ""
@@ -352,9 +361,9 @@
             Me.txtIMO.Text = OrdensOBJ.Imo.ToString
             Me.TxtIMOCAP.Text = OrdensOBJ.Imo.ToString
             Me.txtImportador.Text = OrdensOBJ.Importador.ToString
-            Me.txtANVISA.Text = OrdensOBJ.ANVISA.ToString
+            Me.txtAnvisa.Text = OrdensOBJ.ANVISA.ToString
             Me.txtMarca.Text = OrdensOBJ.Marca.ToString
-            Me.txtMercadoria.Text = OrdensOBJ.Mercadoria.ToString
+            Me.TxtMercadoria.Text = OrdensOBJ.Mercadoria.ToString
             Me.txtONU.Text = OrdensOBJ.Onu.ToString
 
             'Me.ckMadeira.Checked = IIf(OrdensOBJ.ehMadeira = 1, True, False)
@@ -426,12 +435,9 @@
                 End If
             End If
 
-
-
             Carrega_DadosLote()
 
         End If
-
 
 
     End Sub
@@ -445,7 +451,7 @@
         OrdensOBJ.Item = Me.cbItem.SelectedValue
         OrdensOBJ.Embalagem = Me.cbEmbalagem.SelectedValue
         OrdensOBJ.Qtde = Me.TxtQtde.Text
-        OrdensOBJ.Mercadoria = Me.txtMercadoria.Text.ToUpper().Trim
+        OrdensOBJ.Mercadoria = Me.TxtMercadoria.Text.ToUpper().Trim
         OrdensOBJ.Marca = Me.txtMarca.Text.ToUpper().Trim
         OrdensOBJ.QtdeM = Me.txtQM.Text
         OrdensOBJ.Genero = 0
@@ -798,9 +804,9 @@
     End Sub
 
     Protected Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click
-        If ValidaMarcante Then
+        If ValidaMarcante() Then
             Me.lstMarcantes.Items.Add(Me.txtMarcante.Text & " " & Me.TxtQtdeM.Text)
-            Adiciona_Marcante_Temp
+            Adiciona_Marcante_Temp()
             Me.TxtQtdeM.Text = ""
             Me.txtMarcante.Text = ""
             txtMarcante.Focus()
@@ -853,7 +859,7 @@
             Do
                 Me.lstMarcantes.Items.Add(tbI.Fields("MARCANTE").Value.ToString & " " & tbI.Fields("QUANTIDADE").Value.ToString & " " & tbI.Fields("JAFOI").Value.ToString)
                 tbI.MoveNext()
-            Loop While Not TBI.EOF
+            Loop While Not tbI.EOF
 
         End If
         tbI.Close()
@@ -1136,4 +1142,87 @@
         Response.Write("<script>window.open('" + url + "/Fotos.aspx?idTipoProcesso=1&autonumCntrBl=" & OrdensOBJ.Autonum_Cntr & "&autonumPatio=" & Session("PATIO") & "&lote=" & OrdensOBJ.Lote & "&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank');</script>")
     End Sub
 
+    Protected Sub btnSalvarNovoitem_Click(sender As Object, e As EventArgs) Handles btnSalvarNovoitem.Click
+
+        Dim OrdensOBJ As New Ordens
+
+        If (Me.cbEmbalagemNovoItem.SelectedIndex <> 0) Then
+            ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione uma Embalagem.');</script>", False)
+            Exit Sub
+        End If
+
+        OrdensOBJ.Embalagem = Me.cbEmbalagemNovoItem.SelectedIndex
+        OrdensOBJ.Qtde = 1
+        If Me.txtVolumeNovoItem.Text <> "" Then
+            OrdensOBJ.Volume = Replace(Replace(txtVolumeNovoItem.Text, ".", ""), ",", ".")
+        Else
+            OrdensOBJ.Volume = 0
+        End If
+        OrdensOBJ.PesoBruto = Replace(Replace(txtPesoBrutoNovoItem.Text, ".", ""), ",", ".")
+        OrdensOBJ.Imo = Val(Me.txtIMONovoItem.Text)
+        OrdensOBJ.Onu = Me.txtONUNovoItem.Text
+        OrdensOBJ.Mercadoria = Me.TxtMercadoriaNovoItem.Text
+        OrdensOBJ.Importador = Me.txtImportadorNovoItem.Text
+        OrdensOBJ.Marca = Me.txtMarcaNovoItem.Text
+
+
+        OracleDAO.Execute("INSERT INTO SGIPA.TB_CARGA_CNTR (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo)
+                           VALUES (SEQ_CARGA_CNTR.nextval, 
+                            " & lblLote.Text & "
+                            ," & Me.cbItem.Items.Count + 1 & ",
+                            " & Me.TxtQtdeNovoItem.Text & ",
+                            " & Me.TxtQtdeNovoItem.Text & ",
+                            " & Me.cbEmbalagemNovoItem.SelectedIndex & ",
+                            " & Me.TxtMercadoriaNovoItem.Text & ",
+                            " & Me.txtMarcaNovoItem.Text & ",
+                            " & Me.txtPesoBrutoNovoItem.Text & ",'72150000', '0', '76040000',0)")
+
+    End Sub
+    Private Sub CadastroNovoItem()
+        Dim OrdensOBJ As New Ordens
+
+        OrdensOBJ.Embalagem = Me.cbEmbalagemNovoItem.SelectedValue
+        OrdensOBJ.Qtde = Me.TxtQtdeNovoItem.Text
+        If Me.txtVolumeNovoItem.Text <> "" Then
+            OrdensOBJ.Volume = Replace(Replace(txtVolumeNovoItem.Text, ".", ""), ",", ".")
+        Else
+            OrdensOBJ.Volume = 0
+        End If
+        OrdensOBJ.PesoBruto = Replace(Replace(txtPesoBrutoNovoItem.Text, ".", ""), ",", ".")
+        OrdensOBJ.Imo = txtIMONovoItem.Text
+        OrdensOBJ.Onu = txtONUNovoItem.Text
+        OrdensOBJ.Mercadoria = TxtMercadoriaNovoItem.Text
+        OrdensOBJ.Importador = txtImportador.Text
+        OrdensOBJ.Marca = txtMarcaNovoItem.Text
+
+        BD.Conexao.BeginTrans()
+        Dim Sql As String = ""
+        Sql = "insert into sgipa.tb_carga_cntr (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo) 
+                    VALUES ("
+        Sql = Sql & "SEQ_CARGA_CNTR.nextval" & ","
+        Sql = Sql & OrdensOBJ.Lote & ","
+        Sql = Sql & "2" & ","
+        Sql = Sql & OrdensOBJ.Qtde & ","
+        Sql = Sql & OrdensOBJ.Qtde & ","
+        Sql = Sql & OrdensOBJ.Embalagem & ","
+        Sql = Sql & OrdensOBJ.Mercadoria & ","
+        Sql = Sql & OrdensOBJ.Marca & ","
+        Sql = Sql & OrdensOBJ.PesoBruto & ","
+        Sql = Sql & "0" & ","
+        Sql = Sql & "0" & ","
+        Sql = Sql & "0" & ","
+        Sql = Sql & "0" & ","
+        Sql = Sql & ") "
+        BD.Conexao.Execute(Sql)
+
+    End Sub
+
+    Protected Sub lblLote_Load(sender As Object, e As EventArgs) Handles lblLote.Load
+        lblLote.Text = cbLotes.SelectedValue
+    End Sub
+
+    Protected Sub cbEmbalagemNovoItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmbalagemNovoItem.SelectedIndexChanged
+        Dim combo = Me.cbEmbalagemNovoItem.SelectedValue
+
+    End Sub
 End Class
