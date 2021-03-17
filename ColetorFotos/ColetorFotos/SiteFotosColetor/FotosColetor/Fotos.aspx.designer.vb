@@ -32,6 +32,15 @@ Partial Public Class Fotos
     Protected WithEvents btnVoltarColetor As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''lblTipoProcesso control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblTipoProcesso As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''txtImagemBase64 control.
     '''</summary>
     '''<remarks>
@@ -57,24 +66,6 @@ Partial Public Class Fotos
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlPrincipal As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
-    '''lblTitulo control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblTitulo As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblTipoProcesso control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblTipoProcesso As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblConteinerLoteSelecionado control.

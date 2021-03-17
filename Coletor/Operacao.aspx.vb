@@ -1145,6 +1145,7 @@ Public Class WebForm1
     Protected Sub btnSalvarNovoitem_Click(sender As Object, e As EventArgs) Handles btnSalvarNovoitem.Click
 
         Dim OrdensOBJ As New Ordens
+        Dim Sql As String
 
         If (Me.cbEmbalagemNovoItem.SelectedIndex <> 0) Then
             ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "script", "<script>alert('Selecione uma Embalagem.');</script>", False)
@@ -1166,16 +1167,7 @@ Public Class WebForm1
         OrdensOBJ.Marca = Me.txtMarcaNovoItem.Text
 
 
-        OracleDAO.Execute("INSERT INTO SGIPA.TB_CARGA_CNTR (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo)
-                           VALUES (SEQ_CARGA_CNTR.nextval, 
-                            " & lblLote.Text & "
-                            ," & Me.cbItem.Items.Count + 1 & ",
-                            " & Me.TxtQtdeNovoItem.Text & ",
-                            " & Me.TxtQtdeNovoItem.Text & ",
-                            " & Me.cbEmbalagemNovoItem.SelectedIndex & ",
-                            " & Me.TxtMercadoriaNovoItem.Text & ",
-                            " & Me.txtMarcaNovoItem.Text & ",
-                            " & Me.txtPesoBrutoNovoItem.Text & ",'72150000', '0', '76040000',0)")
+        OracleDAO.Execute("INSERT INTO SGIPA.TB_CARGA_CNTR (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo) VALUES (SEQ_CARGA_CNTR.nextval," & lblLote.Text & "," & Me.cbItem.Items.Count + 1 & "," & Me.TxtQtdeNovoItem.Text & "," & Me.TxtQtdeNovoItem.Text & "," & Me.cbEmbalagemNovoItem.SelectedIndex & "," & Me.TxtMercadoriaNovoItem.Text & "," & Me.txtMarcaNovoItem.Text & "," & Me.txtPesoBrutoNovoItem.Text & ",'72150000', '0', '76040000',0)")
 
     End Sub
     Private Sub CadastroNovoItem()
