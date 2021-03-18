@@ -15,7 +15,7 @@
 
         <body>
             <form id="form1" runat="server" submitdisabledcontrols="False" class="wrapper">
-                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server"></asp:ScriptManager>
                 <div class="header">
                     <p>IDENTIFICAÇÃO DOS LOTES</p>
                 </div>
@@ -62,9 +62,19 @@
                                                             UMA
                                                             EMBALAGEM</label>
                                                         <div class="uk-form-controls">
-                                                            <asp:DropDownList runat="server" ID="cbEmbalagemNovoItem"
-                                                                class="uk-select" TabIndex="2" AutoPostBack="True">
-                                                            </asp:DropDownList>
+                                                            <asp:UpdatePanel ID="UpdatePanelEmbalagem" runat="server"
+                                                                UpdateMode="Conditional">
+                                                                <ContentTemplate>
+                                                                    <asp:DropDownList runat="server"
+                                                                        ID="cbEmbalagemNovoItem" class="uk-select"
+                                                                        TabIndex="2" AutoPostBack="True">
+                                                                    </asp:DropDownList>
+                                                                </ContentTemplate>
+                                                                <Triggers>
+                                                                    <asp:AsyncPostBackTrigger ControlID="cbEmbalagemNovoItem"
+                                                                        EventName="SelectedIndexChanged" />
+                                                                </Triggers>
+                                                            </asp:UpdatePanel>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-1-6@l">
@@ -470,14 +480,12 @@
 
             </script>
             <script>
-                document.getElementById("cbEmbalagemNovoItem").onchange = null;
+                //document.getElementById("cbEmbalagemNovoItem").onchange = false;
             </script>
             <script src="lib/jquery.maskedinput-1.2.2.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
                 type="text/javascript"></script>
             <script src="lib/jquery.maskMoney.min.js" type="text/javascript"></script>
-
-
             <script type="text/javascript">
                 jQuery(function ($) {
                     $("#txtTempAnvisa").maskMoney({ allowNegative: true, thousands: '', decimal: '.', affixesStay: false });
@@ -485,7 +493,6 @@
                 });
             </script>
             <script>
-
                 var tamanho = 10;
 
                 function checkPostback(ctrl) {
@@ -495,6 +502,8 @@
                     }
                 }
             </script>
+            
+
         </body>
 
         </html>

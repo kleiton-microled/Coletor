@@ -587,6 +587,22 @@ Public Class Ordens
         Return OracleDAO.List(Sql.ToString())
 
     End Function
+    Public Shared Function CarregarCadEmbalagensNovoItem(Flag_DDC As Integer) As DataTable
+
+        Dim Sql As String
+
+        Sql = " select code as ID, descr AS NOME "
+        If Flag_DDC = 0 Then
+            Sql = Sql & " FROM SGIPA.DTE_TB_EMBALAGENS where flag_coletor=1"
+        Else
+            Sql = Sql & " FROM SGIPA.DTE_TB_EMBALAGENS "
+        End If
+        Sql = Sql & " ORDER BY DESCR "
+
+
+        Return OracleDAO.List(Sql.ToString())
+
+    End Function
 
     Public Shared Function CarregaMarcanteAV(QualLote As Long, QualIDConteiner As String) As DataTable
 

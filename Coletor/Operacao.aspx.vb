@@ -1,4 +1,5 @@
 ﻿Imports Oracle.ManagedDataAccess.Client
+Imports System.Web.Services
 
 Public Class WebForm1
     Inherits System.Web.UI.Page
@@ -145,6 +146,7 @@ Public Class WebForm1
             CarregarConteineres()
             cbConteiner.SelectedIndex = -1
             CarregarEmbalagens()
+            CarregarEmbalagensNovoItem()
 
             If Session("AUTONUMCNTR") > 0 Then
                 Me.cbConteiner.SelectedValue = Session("AUTONUMCNTR")
@@ -202,15 +204,18 @@ Public Class WebForm1
         Me.cbEmbalagem.Items.Insert(0, "--Selecione uma embalagem--")
         Me.cbEmbalagem.SelectedIndex = 0
 
-        Me.cbEmbalagemNovoItem.DataTextField = "DISPLAY"
-        Me.cbEmbalagemNovoItem.DataValueField = "AUTONUM"
-        Me.cbEmbalagemNovoItem.DataSource = Ordens.CarregarCadEmbalagens(0)
-        Me.cbEmbalagemNovoItem.DataBind()
-        Me.cbEmbalagemNovoItem.Items.Insert(0, "--Selecione uma embalagem--")
-        Me.cbEmbalagemNovoItem.SelectedIndex = 0
-
     End Sub
 
+    Private Sub CarregarEmbalagensNovoItem()
+        Me.cbEmbalagemNovoItem.DataTextField = "NOME"
+        Me.cbEmbalagemNovoItem.DataValueField = "ID"
+
+        Me.cbEmbalagemNovoItem.DataSource = Ordens.CarregarCadEmbalagensNovoItem(0)
+        Me.cbEmbalagemNovoItem.DataBind()
+
+        'Me.cbEmbalagemNovoItem.Items.Insert(0, "--Selecione uma embalagem--")
+        'Me.cbEmbalagemNovoItem.SelectedIndex = 0
+    End Sub
 
     Protected Sub cbConteiner_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbConteiner.SelectedIndexChanged
 
@@ -864,9 +869,7 @@ Public Class WebForm1
         End If
         tbI.Close()
 
-
     End Sub
-
 
     Private Function ValidaMarcante() As Boolean
 
@@ -1166,8 +1169,27 @@ Public Class WebForm1
         OrdensOBJ.Importador = Me.txtImportadorNovoItem.Text
         OrdensOBJ.Marca = Me.txtMarcaNovoItem.Text
 
+        Sql = "INSERT INTO "
+        Sql = Sql & "SGIPA.TB_CARGA_CNTR ("
+        Sql = Sql & " AUTONUM,"
+        Sql = Sql & " BL,"
+        Sql = Sql & " ITEM,"
+        Sql = Sql & " QUANTIDADE,"
+        Sql = Sql & " QUANTIDADE_REAL,"
+        Sql = Sql & " EMBALAGEM,"
+        Sql = Sql & " MERCADORIA,"
+        Sql = Sql & " MARCA,"
+        Sql = Sql & " PESO_BRUTO,"
+        Sql = Sql & " NCM,"
+        Sql = Sql & " VOLUME_M3,"
+        Sql = Sql & " NCM2,"
+        Sql = Sql & " FLAG_ITEM_ACRESCIMO )"
+        Sql = Sql & " VALUES ("
+        Sql = Sql & " EQ_CARGA_CNTR.nextval," & lblLote.Text & "," & Me.cbItem.Items.Count + 1 & "," & TxtQtdeNovoItem.Text & "," & TxtQtdeNovoItem.Text & ","
+        Sql = Sql & Me.cbEmbalagem.SelectedValue & "," & TxtMercadoriaNovoItem.Text & "," & txtMarcaNovoItem.Text & ","
+        Sql = Sql & txtPesoBrutoNovoItem.Text & ",'000000'" & txtVolumeNovoItem.Text & ",'000000'" & ", 0" & ")"
 
-        OracleDAO.Execute("INSERT INTO SGIPA.TB_CARGA_CNTR (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo) VALUES (SEQ_CARGA_CNTR.nextval," & lblLote.Text & "," & Me.cbItem.Items.Count + 1 & "," & Me.TxtQtdeNovoItem.Text & "," & Me.TxtQtdeNovoItem.Text & "," & Me.cbEmbalagemNovoItem.SelectedIndex & "," & Me.TxtMercadoriaNovoItem.Text & "," & Me.txtMarcaNovoItem.Text & "," & Me.txtPesoBrutoNovoItem.Text & ",'72150000', '0', '76040000',0)")
+        'OracleDAO.Execute("INSERT INTO SGIPA.TB_CARGA_CNTR (autonum, bl, item, quantidade, quantidade_real, embalagem, mercadoria, marca, peso_bruto, ncm, volume_m3, ncm2, flag_item_acrescimo) VALUES (SEQ_CARGA_CNTR.nextval," & lblLote.Text & "," & Me.cbItem.Items.Count + 1 & "," & Me.TxtQtdeNovoItem.Text & "," & Me.TxtQtdeNovoItem.Text & "," & Me.cbEmbalagemNovoItem.SelectedIndex & "," & Me.TxtMercadoriaNovoItem.Text & "," & Me.txtMarcaNovoItem.Text & "," & Me.txtPesoBrutoNovoItem.Text & ",'72150000', '0', '76040000',0)")
 
     End Sub
     Private Sub CadastroNovoItem()
@@ -1214,7 +1236,10 @@ Public Class WebForm1
     End Sub
 
     Protected Sub cbEmbalagemNovoItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmbalagemNovoItem.SelectedIndexChanged
-        Dim combo = Me.cbEmbalagemNovoItem.SelectedValue
+        Me.lblLote.Text = Me.cbEmbalagemNovoItem.SelectedValue.ToString()
+    End Sub
 
+    Protected Sub cbEmbalagemNovoItem_TextChanged(sender As Object, e As EventArgs) Handles cbEmbalagemNovoItem.TextChanged
+        Me.lblLote.Text = Me.cbEmbalagemNovoItem.SelectedValue
     End Sub
 End Class

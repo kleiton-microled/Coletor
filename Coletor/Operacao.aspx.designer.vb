@@ -77,6 +77,15 @@ Partial Public Class WebForm1
     Protected WithEvents lblLote As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''UpdatePanelEmbalagem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanelEmbalagem As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''cbEmbalagemNovoItem control.
     '''</summary>
     '''<remarks>
