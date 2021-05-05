@@ -44,7 +44,6 @@ namespace WsFotosColetor
                 return con.Query<Foto>(@"SELECT ID, ID_WORKFLOW_FOTO, AUTONUM_CNTR_BL, AUTONUM_PATIO, AUTONUM_CS_OP, BL, AUTONUM_PATIO_RDX, AUTONUM_CS_RDX, ID_FOTO_SHAREPOINT, DT_UPLOAD, IMAGEM_ID FROM SGIPA.TB_FOTO_PROCESSO WHERE IMAGEM_ID = :imagem_id", parametros).FirstOrDefault();
             }
         }
-
         public void ExcluirFoto(string imagem_id)
         {
             using (OracleConnection con = new OracleConnection(Configs.StringConexao()))

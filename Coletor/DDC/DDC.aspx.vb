@@ -33,6 +33,8 @@ Public Class DDC
             End Try
         End If
 
+
+
         If Not Page.IsPostBack Then
 
             txtUsuario.Text = Session("USUARIO")
@@ -44,7 +46,7 @@ Public Class DDC
             Me.txtAutonumCNTR.Text = Session("AUTONUMCNTR").ToString
             Me.txtOC.Text = Session("OC").ToString
 
-            'CarregarEmbalagens()
+            CarregarEmbalagens()
 
             If Session("AUTONUMCNTR") > 0 Then
 
@@ -62,6 +64,8 @@ Public Class DDC
                     Me.cbEmbalagem.SelectedValue = Session("EMBALAGEM")
                     Me.TxtQtde.Text = Session("QTDE")
                     Me.txtPesoBruto.Text = Session("PESO")
+
+
 
                 End If
 

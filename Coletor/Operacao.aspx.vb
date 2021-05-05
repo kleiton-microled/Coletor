@@ -1240,6 +1240,6 @@ Public Class WebForm1
     End Sub
 
     Protected Sub cbEmbalagemNovoItem_TextChanged(sender As Object, e As EventArgs) Handles cbEmbalagemNovoItem.TextChanged
-        Me.lblLote.Text = Me.cbEmbalagemNovoItem.SelectedValue
+
     End Sub
 End Class

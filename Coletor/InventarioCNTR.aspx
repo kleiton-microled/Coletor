@@ -27,7 +27,7 @@
                         <div class="uk-grid-small" uk-grid>
                             <div class="uk-width-1-3@l">
                                 <labe class="uk-form-label" for="txtQuantidade">CONTAINER</labe>
-                                <asp:TextBox ID="txtCNTR4" runat="server" AutoCompleteType="Disabled" MaxLength="4"
+                                <asp:TextBox ID="txtCNTR4" runat="server" AutoCompleteType="Disabled" MaxLength="12"
                                     class="uk-input"></asp:TextBox>
                             </div>
                             <div class="uk-width-1-3@l">
@@ -99,7 +99,7 @@
                             </div>
                             <div class="uk-width-1-3@l">
                                 <labe class="uk-form-label" for="txtYardAtual">LOCAL ATUAL</labe>
-                                <asp:TextBox ID="txtYardAtual" runat="server" AutoCompleteType="Disabled" MaxLength="4"
+                                <asp:TextBox ID="txtYardAtual" runat="server" AutoCompleteType="Disabled" MaxLength="7"
                                     class="uk-input"></asp:TextBox>
                             </div>
                             <div class="uk-width-1-3@l">
@@ -114,7 +114,7 @@
                             </div>
                             <div class="uk-width-1-2@l">
                                 <labe class="uk-form-label" for="txtYard">LOCAL</labe>
-                                <asp:TextBox ID="txtYard" runat="server" AutoCompleteType="Disabled" MaxLength="4"
+                                <asp:TextBox ID="txtYard" runat="server" AutoCompleteType="Disabled" MaxLength="7"
                                     class="uk-input"></asp:TextBox>
                             </div>
                             <div class="uk-width-1-2@l">
@@ -143,7 +143,9 @@
                     <div class="footer">
                         <div class="menu-buttons">
                             <asp:Button ID="btnFotos" runat="server" class="uk-button button-ecoporto uk-button-large"
-                                Text="FOTOS" />
+                                Text="FOTOS 7" />
+                            <asp:Button ID="btnFotos17" runat="server" class="uk-button button-ecoporto uk-button-large"
+                                Text="FOTOS 17" />
                             <asp:Button ID="btSalvar" runat="server" class="uk-button uk-button-default uk-button-large"
                                 Text="GRAVAR" />
                             <asp:Button ID="btSalvar0" runat="server"

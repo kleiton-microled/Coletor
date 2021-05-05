@@ -78,8 +78,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-1-6@l">
-                                                        <labe class="uk-form-label" for="TxtQtdeNovoItem">QUANTIDADE
-                                                        </labe>
+                                                        <labe class="uk-form-label" for="TxtQtdeNovoItem">QUANTIDADE</labe>
                                                         <asp:TextBox ID="TxtQtdeNovoItem" runat="server"
                                                             class="uk-input">
                                                         </asp:TextBox>

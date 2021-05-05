@@ -1183,5 +1183,13 @@ Public Class WebFormICNTR
         End If
     End Sub
 
+    Protected Sub btnFotos_Click(sender As Object, e As EventArgs) Handles btnFotos.Click
+        Dim url As String = ConfigurationManager.AppSettings("UrlSiteFotos").ToString()
+        Response.Write("<script>window.open('" + url + "/Fotos.aspx?idTipoProcesso=7&autonumCntrBl=" & txtCNTR4.Text & "&autonumPatio=" + Session("PATIO").ToString() + "&lote=0&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank');</script>")
+    End Sub
 
+    Protected Sub btnFotos17_Click(sender As Object, e As EventArgs) Handles btnFotos17.Click
+        Dim url As String = ConfigurationManager.AppSettings("UrlSiteFotos").ToString()
+        Response.Write("<script>window.open('" + url + "/Fotos.aspx?idTipoProcesso=17&autonumCntrBl=" & txtCNTR4.Text & "&autonumPatio=" + Session("PATIO").ToString() + "&lote=0&autonumCsOp=0&autonumPatioOp=0&autonumCsrdx=0&autonumPatiordx=0','_blank');</script>")
+    End Sub
 End Class

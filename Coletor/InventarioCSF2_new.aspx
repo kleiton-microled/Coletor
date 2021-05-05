@@ -24,7 +24,7 @@
                     </div>
                     <div class="content" style="margin: 25px;">
                         <div class="uk-grid-small" uk-grid>
-                            <div class="uk-width-1-1">
+                            <div class="uk-width-1-3@l">
                                 <labe class="uk-form-label" for="txtQuantidade">MARCANTE</labe>
                                 <asp:TextBox ID="txtMarcante" runat="server" class="uk-input"
                                     AutoCompleteType="Disabled" AutoPostBack="True" MaxLength="12"></asp:TextBox>
@@ -33,12 +33,12 @@
                                 <asp:TextBox ID="txtSistema" runat="server" AutoCompleteType="Disabled"
                                     AutoPostBack="True" Visible="False"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-2@l">
+                            <div class="uk-width-1-3@l">
                                 <labe class="uk-form-label" for="txtLote">LOTE</labe>
                                 <asp:TextBox ID="txtLote" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-2@l">
+                            <div class="uk-width-1-3@l">
                                 <labe class="uk-form-label" for="txtBL">BL</labe>
                                 <asp:TextBox ID="txtBL" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
@@ -66,22 +66,22 @@
                                 <asp:TextBox ID="txtVolume" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-1">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtLocal">LOCAL</labe>
                                 <asp:TextBox ID="txtLocal" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtMercadoria">MERCADORIA</labe>
                                 <asp:TextBox ID="txtMercadoria" runat="server" class="uk-input"
                                     AutoCompleteType="Disabled" ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtCliente">IMPORTADOR</labe>
                                 <asp:TextBox ID="txtCliente" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtNVOCC">NVOCC</labe>
                                 <asp:TextBox ID="txtNVOCC" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
@@ -111,24 +111,24 @@
                                 <asp:TextBox ID="txtEtiqueta" runat="server" AutoCompleteType="Disabled"
                                     class="uk-input" AutoPostBack="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtQtdePos">QUANTIDADE</labe>
                                 <asp:TextBox ID="txtQtdePos" runat="server" class="uk-input" AutoCompleteType="Disabled"
                                     ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <label class="uk-form-label" for="form-stacked-select">ARM</label>
                                 <div class="uk-form-controls">
                                     <asp:DropDownList runat="server" ID="cbArm" AutoPostBack="True" class="uk-select">
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-4@l">
                                 <labe class="uk-form-label" for="txtQuantidade">LOCAL</labe>
                                 <asp:TextBox ID="txtlocalpos" runat="server" class="uk-input"
                                     AutoCompleteType="Disabled" ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="uk-width-1-1">
+                            <div class="uk-width-1-4@l">
                                 <label class="uk-form-label" for="form-stacked-select">MOTIVO</label>
                                 <div class="uk-form-controls">
                                     <asp:DropDownList runat="server" ID="cbMotivoPos" AutoPostBack="True"

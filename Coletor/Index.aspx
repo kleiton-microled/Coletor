@@ -300,7 +300,7 @@
                     <td 
                         bgcolor="#5D7B9D" class="auto-style7" colspan="2" style="width: 100%; height: 10%;">
                         <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="X-Large" 
-                            Text="VERSAO 10.05.2018" Font-Names="Tahoma" Width="100%" 
+                            Text="VERSAO " Font-Names="Tahoma" Width="100%" 
                             CssClass="style14" ForeColor="#99FFCC" Height="100%"></asp:Label>
                     </td>
                 </tr>
